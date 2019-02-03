@@ -11,7 +11,7 @@ from custom_exceptions import UserExitException
 from models import BaseItem
 from utils import get_input_function
 
-__author__ = 'sobolevn'
+__author__ = 'HeilRike'
 
 
 class BaseCommand(object):
@@ -127,13 +127,23 @@ class UnDoneCommand(DoneCommand):
         return 'undone'
 
 
-# class SaveCommand(BaseCommand):
-#     @staticmethod
-#     def label():
-#         return 'save'
+class SaveCommand(BaseCommand):
+    @staticmethod
+    def label():
+        return 'save'
 
-#     def perform(self, objects, *args, **kwargs):
-#         frame = 
+    def perform(self, objects, *args, **kwargs):
+        try:
+            namefile = input('Enter name file for save: ')
+            with open(namefile, 'w') as fs:
+                save = fs.write(ListCommand().perform(objects))
+        except ValueError as v:
+            print('Bad value', v)
+        except TypeError as t:
+            print('Bad Type', t)
+        except IndexError as i:
+            print('Bad Index', i)
+
 
 
 class ExitCommand(BaseCommand):

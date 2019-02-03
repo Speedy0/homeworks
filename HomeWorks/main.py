@@ -23,7 +23,7 @@ from models import (
 )
 from utils import get_input_function
 
-__author__ = 'sobolevn'
+__author__ = 'HeilRike'
 
 
 def get_routes():

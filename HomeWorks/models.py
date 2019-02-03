@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__author__ = 'sobolevn'
+__author__ = 'HeilRike'
 
 from utils import get_input_function
 
