@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-__author__ = 'HeilRike'
+__author__ = 'hellride'
 
 
 __all__ = ('get_input_function', )
